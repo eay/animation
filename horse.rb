@@ -30,7 +30,7 @@ end
 #    | pamscale 0.5 \
 #    | pnmpad -white -top 100 -bottom=100 \
 
-system "gifsicle -d 25 --colors 256 #{names.join(' ')} > #{NAME}.gif"
+system "gifsicle -d 25 --loop --colors 256 #{names.join(' ')} > #{NAME}.gif"
 
 tmp_files.each {|fn| File.delete(fn)}
 

@@ -28,7 +28,7 @@ names = []
   open(out_name,"wb").write(cut)
 end
 
-system "gifsicle -d 50 --colors 256 #{names.join(' ')} > #{NAME}.gif"
+system "gifsicle -d 50 --loop --colors 256 #{names.join(' ')} > #{NAME}.gif"
 
 tmp_files.each {|fn| File.delete(fn)}
 
